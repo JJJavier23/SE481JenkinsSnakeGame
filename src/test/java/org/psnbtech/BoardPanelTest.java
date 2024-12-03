@@ -5,17 +5,16 @@ import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.image.BufferedImage;
-import java.util.LinkedList;
-import java.util.Random;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Point;
 
 public class BoardPanelTest {
 	private BoardPanel boardPanel;
+	private SnakeGame game;
 
     @BeforeEach
     public void setUp() {
+        game = new SnakeGame();
         boardPanel = new BoardPanel(game);
     }
 
@@ -25,6 +24,9 @@ public class BoardPanelTest {
                 BoardPanel.ROW_COUNT * BoardPanel.TILE_SIZE, BufferedImage.TYPE_INT_ARGB);
         Graphics graphics = image.getGraphics();
         boardPanel.drawTile(0, 0, TileType.Fruit, graphics);
-        assertTrue(isTileColorPresent(image, Color.RED));
+        
+        int rgb = image.getRGB(BoardPanel.TILE_SIZE/2, BoardPanel.TILE_SIZE/2);
+        Color pixelColor = new Color(rgb);
+        assertEquals(Color.RED, pixelColor);
     }
 }
