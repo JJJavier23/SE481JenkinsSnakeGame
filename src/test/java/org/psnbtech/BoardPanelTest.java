@@ -1,4 +1,8 @@
-import static org.junit.Assert.*;
+package org.psnbtech;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
@@ -7,18 +11,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.psnbtech.BoardPanel;
-import org.psnbtech.Clock;
-import org.psnbtech.Direction;
-import org.psnbtech.SnakeGame;
-import org.psnbtech.TileType;
-
 public class BoardPanelTest {
 	private BoardPanel boardPanel;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         boardPanel = new BoardPanel(game);
     }
