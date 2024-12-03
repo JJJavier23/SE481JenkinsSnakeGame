@@ -17,11 +17,9 @@ import org.psnbtech.TileType;
 
 public class BoardPanelTest {
 	private BoardPanel boardPanel;
-    private TestSnakeGame game;
 
     @Before
     public void setUp() {
-        game = new TestSnakeGame();
         boardPanel = new BoardPanel(game);
     }
 
