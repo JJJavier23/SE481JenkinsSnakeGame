@@ -7,7 +7,7 @@ public class BoardPanelTest {
 
     @Test
     public void testTileSize() {
-        assertEquals(20, BoardPanel.TILE_SIZE, "Tile size should be 30 pixels");
+        assertEquals(30, BoardPanel.TILE_SIZE, "Tile size should be 30 pixels");
     }
 
     @Test
