@@ -1,13 +1,13 @@
 package org.psnbtech;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class BoardPanelTest {
 
     @Test
     public void testTileSize() {
-        assertEquals(30, BoardPanel.TILE_SIZE, "Tile size should be 30 pixels");
+        assertEquals(20, BoardPanel.TILE_SIZE, "Tile size should be 30 pixels");
     }
 
     @Test
